@@ -103,7 +103,7 @@ border-radius: none;
 [[Хорошо, я подчинюсь и подойду к терминалу -&gt;Общение с ИИ]]</tw-passagedata><tw-passagedata pid="14" name="Общение с ИИ" tags="" position="1025,1125" size="100,100">&lt;img src=&quot;https://i.ibb.co/YfMNXxH/terminal.jpg&quot; width=&#39;800&#39;&gt;
 (set: $waiting to 0)
 Когда вы подошли, вы увидели сообщение на терминале:
-(if: $manual is not &#39;1&#39;)[
+(if: $manual is not 1)[
 &quot;Приветствую, путник.]
 (else:) [
 &quot;Я смотрю, вы не торопились. ] 
@@ -181,7 +181,7 @@ border-radius: none;
 &quot;Для того, чтобы починить холодильник-излучатель, нужно пройти в диспетчерскую реактора и сообщить мне показатели, которые там будут отображены на экране, после чего я сообщу следующие действия.
 Я открою для тебя дверь.&quot;
 *Терминал выключается*
-[[Пройти в реакторную-&gt;Диспетчерская реактора]]</tw-passagedata><tw-passagedata pid="19" name="Ручной режим" tags="" position="875,975" size="100,100">&lt;img src=&quot;https://i.ibb.co/f8SbhKm/at-station.jpg&quot; width=&#39;800&#39;&gt;
+[[Пройти в диспетчерскую-&gt;Диспетчерская реактора]]</tw-passagedata><tw-passagedata pid="19" name="Ручной режим" tags="" position="875,975" size="100,100">&lt;img src=&quot;https://i.ibb.co/f8SbhKm/at-station.jpg&quot; width=&#39;800&#39;&gt;
 (set: $relation to $relation - 20, $manual to 1)
 Вы проигнорировали предупреждение по громкой связи и перевели корабль в режим ручного управления. Игнорировать приказы на чужом корабле не очень-то уж и вежливо, возможно. вы пожалеете, но вы решили, что лучше заботиться о своей безопасности заранее.
 [[Подойти к терминалу-&gt;Общение с ИИ]]</tw-passagedata><tw-passagedata pid="20" name="Диспетчерская реактора" tags="" position="1125,1500" size="100,100">&lt;img src=&quot;https://i.ibb.co/1ztmZ3Z/reactor-control-future.jpg&quot; width=&#39;800&#39;&gt;
@@ -265,7 +265,8 @@ border-radius: none;
 Концовка 3/9
 Вы отправились на корабле в путь. Топлива хватило на час, и теперь ваш корабль дрейфует в космосе. Вы не можете даже отправлять сигналы о помощи.
 Вы запаслись едой, и, возможно, кто-то случайно натолкнёся на ваш корабль, но надеяться на это не стоит. 
-Вы обречены.</tw-passagedata><tw-passagedata pid="31" name="Корабль" tags="" position="1550,1900" size="100,100">&lt;img src=&quot;https://i.ibb.co/zVGT3M7/damaged-station.jpg&quot; width=&#39;800&#39;&gt;
+Вы обречены.
+(link: &quot;Начать заново&quot;)[(confirm: &quot;Вы уверены?&quot;)[(reload:)]]</tw-passagedata><tw-passagedata pid="31" name="Корабль" tags="" position="1550,1900" size="100,100">&lt;img src=&quot;https://i.ibb.co/zVGT3M7/damaged-station.jpg&quot; width=&#39;800&#39;&gt;
 (if: $manual is 1)[
 Вы видите, что корабль стоит на месте, но выглядит получше, чем был. 
 Судя по всему, ИИ починил корабль, и только тогда понял, что он не может управлять им. 
